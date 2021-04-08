@@ -30,14 +30,14 @@ exports.recommend = async function recommend(userId) {
     const predIndices = recommendations.indices;
     const predIds = tf.gather(movieIds, predIndices).arraySync();
 
-    const recommendationsArr = [];
+    let recommendationsArr = [];
     predIds.forEach(function(id){
         const index = movies.findIndex(item => item.movieId === id);
         recommendationsArr.push(movies[index]);
     })
 
     recommendationsArr.forEach(function(i){
-         i.genres = i.genres.split("|");
+        //  i.genres = i.genres.split("|");
          i.year = i.title.slice(-5, -1);
         });
 
