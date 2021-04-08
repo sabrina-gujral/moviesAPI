@@ -27,7 +27,9 @@ app.route('/movies')
 app.get('/movies/:userId/:q', function(req, res){
   const userId = req.params.userId;
   const q = req.params.q;
-  if (userId < 0 || userId > 610){
+  let rex = '[A-Za-z]';
+  let rexEnd = '^[A-Za-z]';
+  if (userId < 0 || userId > 610 || userId.match(rex) || userId.match(rexEnd)){
     res.send("No User found!");
   } else {
   async function recommend() {
