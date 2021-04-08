@@ -37,7 +37,7 @@ exports.recommend = async function recommend(userId) {
     })
 
     recommendationsArr.forEach(function(i){
-         i.genres = i.genres.split("|")
+         i.genres = i.genres.split("|");
          i.year = i.title.slice(-5, -1);
         });
 
