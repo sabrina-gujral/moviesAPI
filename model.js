@@ -1,5 +1,5 @@
 const tf = require('@tensorflow/tfjs-node');
-const movies = require("./data/web_data.json");
+const movies = require("./data/web_data_complete.json");
 const movieIds = require("./data/movieId.json");
 
 class L2 {
