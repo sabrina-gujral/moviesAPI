@@ -21,20 +21,25 @@
 </head>
 <body>
     <section id="heading">
-        <h1 class="text-center">Welcome to the MovieAPI!</h1>
+        <h1 class="text-center">The MoviesAPI</h1>
     </section>
     
     <section id="body">
         <div class="card" style="width:35rem; margin: 0% auto;">
+        	<div class="conatiner justify-center">
+        		<p>This is an API that returns recommendations and predicted ratings for each of the recommendations through Collaborative Filtering approach. The model uses the <a href="https://www.kaggle.com/shubhammehta21/movie-lens-small-latest-dataset">MovieLens</a> dataset from Kaggle. The corresponding notebook and webapp code along with the api code base is there on <a href="https://github.com/sabrina-gujral/recommender-system">GitHub</a>
+        			<br>
+        			Don't forget to look at the main website, <a href="https://shielded-dusk-69513.herokuapp.com/">Dionysus</a></p>
+        	</div>
             <form class="form-control" action="/" method="POST">
                 <input class="form-control" type="text" placeholder="UserId" name="userId" autocomplete="false" autofocusg/> <br>
                 <div class="form-check">
-                    <input class="form-check-input" id="ra" type="radio" value="ra" name="radio" checked/>
-                <label class="form-check-label" for="ra">Predicted Ratings</label>
+                    <input class="form-check-input" id="re" type="radio" value="re" name="radio" checked/>
+                <label class="form-check-label" for="re">Predicted Movies</label>
                 </div>
                 <div class="form-check">
-                <input class="form-check-input" id="re" type="radio" value="re" name="radio" />
-                <label class="form-check-label" for="re">Predicted Movies</label> <br>
+                <input class="form-check-input" id="ra" type="radio" value="ra" name="radio" />
+                <label class="form-check-label" for="ra">Predicted Ratings</label> <br>
                 </div>
                 <br>
                 <button class="btn btn-dark" type="submit">Submit</button>
